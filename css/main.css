@@ -9,6 +9,7 @@ body {
 
 /* ========= Header Styles ========== */
 
+/* ----- Header Placement ----- */
 .header {
     height: 10vh;
     position: fixed;
@@ -17,31 +18,75 @@ body {
     width: 100%;
     z-index: 9;
 }
-.header .nav {
-    list-style: none;
-}
+
 .header .nav > li {
     display: inline-block;
-    padding: 5px;
+    padding: 0 7px;
 }
-.nav.nav-right {
+.header .nav.nav-right {
     float: right;
+    margin: 1.1em 1.45em;
 }
-.nav.nav-left {
+.header .nav.nav-left {
     float: left;
+    margin: 1.8em 1.4em;
 }
-.nav-wrapper {
+.nav {
+    list-style: none;
+    /* margin: 1.8em 1.5em */
+}
+/* --- Header Design ----- */
+
+.home-header {
+    font-size: 13px;
+}
+.nav-links {
+    color: rgb(53, 53, 53);
+    text-decoration: none;
+} 
+.nav-links:hover,
+.nav-links:active {
+    text-decoration: underline;
+}
+.nav-links.nav-button {
+    background-color: rgb(73, 135, 236);
+    border-radius: 2px;
+    border: 1px solid rgb(73, 135, 236);
     box-sizing: border-box;
-    padding: 0 5px;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 5.2px 11.8px;
+    text-decoration: none;
+    height: 30px;
 }
 
 /* ============ Footer Styles ============ */
 
 .footer {
-    background-color: rgba(0, 0, 0, 0.3);
-    height: 5vh;
+    background: rgb(245, 245, 245);
+    background: linear-gradient(180deg, rgba(245, 245, 245, 1) 0%, rgba(239, 239, 239, 1) 100%);
+    border-top: 1px solid rgb(228, 228, 228);
+    font-size: 13px;
+    height: 5.5vh;
+    text-align: center;
 }
-
+.footer .nav {
+    margin: 1.05em 1.4em;
+}
+.footer .nav > li {
+    display: inline-block;
+    padding: 0 11.7px;
+}
+.footer .nav.nav-left {
+    float: left;
+}
+.footer .nav.nav-right {
+    float: right;
+}
+.footer .nav-links {
+    color: rgb(100, 100, 100);
+}
 /* ======== Content Styles =========== */
 
 
@@ -99,7 +144,7 @@ body {
 
 .button-wrapper {
     box-sizing: border-box;
-    margin: 2vh auto;
+    margin: 3.5vh auto;
     text-align: center;
     width: 50%;
 }
@@ -112,16 +157,17 @@ body {
     border: 1px solid rgba(242, 242, 242, 1);
     border-radius: 5px;
     color: rgb(100, 100, 100);
-    font-size: 0.87em;
+    font-size: 0.86em;
     box-sizing: border-box;
     display: inline-block;
-    padding: 0.69em 1.12em;
+    padding: 0.6em 1.1em;
+    height: 35.5px;
 }
 .goog-button:hover,
 .goog-button:active {
     border: 1px solid rgb(198, 198, 198);
     box-shadow: 0px 1px rgba(233, 233, 233, 1);
-
     color: #000;
+    cursor: pointer;
 }
 
