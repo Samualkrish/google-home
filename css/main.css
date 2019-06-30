@@ -1,0 +1,102 @@
+/* ============ General Styles ============= */
+body {
+    font-family: helvetica, arial, sans;
+    font-size: 16px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ========= Header Styles ========== */
+
+.header {
+    height: 10vh;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+}
+.header .nav {
+    list-style: none;
+}
+.header .nav > li {
+    display: inline-block;
+    padding: 5px;
+}
+.nav.nav-right {
+    float: right;
+}
+.nav.nav-left {
+    float: left;
+}
+.nav-wrapper {
+    box-sizing: border-box;
+    padding: 0 5px;
+}
+
+/* ============ Footer Styles ============ */
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 5vh;
+}
+
+/* ======== Content Styles =========== */
+
+.content-search-form {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    padding: 10px 5px;
+}
+.content-search-form .search-bar {
+    border: 1px solid rgba(223, 225, 229, 1);
+    border-radius: 16px;
+    box-sizing: border-box;
+    height: 32px;
+    margin: 3px auto;
+    padding: 7px 5px;
+    width: 484px;
+}
+.content-search-form .search-bar:hover,
+.content-search-form .search-bar:active {
+   box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+}
+.content-wrapper {
+    margin: 10rem auto;
+    max-width: 980px;
+    width: 90vw;
+}
+.main-wrapper {
+    flex: 1 1 auto;
+    padding-top: 10vh;
+    width: 100%;
+}
+.search-bar > #search-bar {
+    border: none;
+    /* font-size: 1.5rem; */
+    width: 99%;
+    text-overflow: clip;
+}
+.search-bar>#search-bar:focus {
+    outline: none;
+}   
+
+/* ------ Buttons ------ */
+
+.button-wrapper {
+    box-sizing: border-box;
+    margin: 2vh auto;
+    text-align: center;
+    width: 50%;
+}
+.goog-button {
+    background-color: rgba(242, 242, 242, 1);
+    border: 1px solid rgba(242, 242, 242, 1);
+    border-radius: 5px;
+    color: rgb(100, 100, 100);
+    font-size: 0.9em;
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 0.65em 1.4em;
+}
+
