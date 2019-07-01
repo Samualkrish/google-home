@@ -13,7 +13,6 @@ body {
 .header {
     height: 10vh;
     position: fixed;
-    overflow: hidden;
     top: 0;
     width: 100%;
     z-index: 9;
@@ -48,7 +47,7 @@ body {
 .nav-links:active {
     text-decoration: underline;
 }
-.nav-links.nav-button {
+.nav-links .nav-button {
     background-color: rgb(73, 135, 236);
     border-radius: 2px;
     border: 1px solid rgb(73, 135, 236);
@@ -60,6 +59,86 @@ body {
     text-decoration: none;
     height: 30px;
 }
+.nav-links .nav-button:active {
+    background-color: rgb(52, 102, 182);
+    color: rgb(204, 204, 204);
+}
+
+/* ------ Dropdown Styles -------- */
+
+.dropdown {
+    position: relative;
+}
+.dropdown:hover .drop-menu {
+    display: block;
+    margin-top: 10px;
+}
+.drop-trigger {
+    display: inline-block;
+    position: relative;
+}
+.drop-menu {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    border: 1px solid rgb(228, 228, 228);
+    display: none;
+    height: 596px;
+    min-height: 196px;
+    max-height: 647px;
+    padding: 1em 0 0;
+    position: absolute;
+    right: 0;
+    width: 320px;
+    z-index: 9;
+}
+.drop-menu:before {
+    border: 0.6em solid;
+    border-color: transparent transparent #fff;
+    content: "";
+    height: 0;
+    position: absolute;
+    right: 10px;
+    top: -15px;
+}
+
+/* ----- Dropdown Grid ----- */
+
+.drop-wrapper {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-column-gap: 18px;
+    grid-row-gap: 23px;
+    padding: 30px;
+}
+
+.drop-wrapper > li {
+    background-color: #fff;
+    /* border: none; */
+    color: #fff;
+    height: 90px;
+}
+.drop-wrapper > li:hover {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    /* transition: all 0.2s ease-in; */
+}
+.dropdown-items {
+    box-sizing: border-box;
+    height: 80px;
+    width: 100%;
+    display: inline-block;
+    margin-top: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+.dropdown-items > p {
+    font-family: helvetica, arial, sans;
+    color: rgb(53, 53, 53);
+    bottom: 0;
+}
+.dropdown-items > img {
+    margin-bottom: 10px;
+    width: 68%;
+}
 
 /* ============ Footer Styles ============ */
 
@@ -68,11 +147,11 @@ body {
     background: linear-gradient(180deg, rgba(245, 245, 245, 1) 0%, rgba(239, 239, 239, 1) 100%);
     border-top: 1px solid rgb(228, 228, 228);
     font-size: 13px;
-    height: 5.5vh;
+    height: 5.4vh;
     text-align: center;
 }
 .footer .nav {
-    margin: 1.05em 1.4em;
+    margin: 1em 1.4em;
 }
 .footer .nav > li {
     display: inline-block;
@@ -93,21 +172,20 @@ body {
 /* ----- Search Bar ------ */
 
 .content-search-form {
-    border: 1px solid rgba(0, 0, 0, 0.3);
     padding: 10px 5px;
 }
 .content-search-form .search-bar {
-    border: 1px solid rgba(223, 225, 229, 1);
+    border: 1px solid #dfe1e5;
     border-radius: 24px;
     box-sizing: border-box;
-    height: 44px;
-    margin: 3px auto;
-    padding: 10px 8px;
-    width: 584px;
+    height: 47px;
+    margin: auto;
+    padding: 10px 10px;
+    width: 582px;
 }
-.content-search-form .search-bar:hover,
-.content-search-form .search-bar:active {
+.content-search-form .search-bar:hover {
    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+   border-color: rgba(223, 225, 229, 1);
 }
 .content-wrapper {
     margin: 7.5rem auto;
@@ -121,9 +199,10 @@ body {
 }
 .search-bar > #search-bar {
     border: none;
-    width: 99%;
+    width: 98%;
     text-overflow: clip;
     font-size: 1.1rem;
+    margin-left: 10px;
 }
 .search-bar>#search-bar:focus {
     outline: none;
@@ -133,7 +212,7 @@ body {
 
 .content-image {
     text-align: center;
-    margin-bottom: 2.5vh;
+    margin-bottom: 2vh;
 }
 .content-image > img {
     height: 93px;
@@ -144,7 +223,7 @@ body {
 
 .button-wrapper {
     box-sizing: border-box;
-    margin: 3.5vh auto;
+    margin: 4vh auto;
     text-align: center;
     width: 50%;
 }
