@@ -47,6 +47,9 @@ body {
 .nav-links:active {
     text-decoration: underline;
 }
+.nav-links > img {
+    height: 18px;
+}
 .nav-links .nav-button {
     background-color: rgb(73, 135, 236);
     border-radius: 2px;
